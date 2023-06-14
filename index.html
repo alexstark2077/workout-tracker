@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Your Workout Tracker</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <h1 class="page-title">
+            <div class="page-title__wrapper">
+                <span>Your Workout Tracker</span>
+                <span class="tip">
+                    <div class="tip-icon"><img src="info-tip.svg" alt=""></div>
+                    <div class="tip-itself">It saves all your data (workouts) locally: it'll be available only in this browser
+                        at this exact URL</div>
+                </span>
+            </div>
+        </h1>
+        <h2 class="page-subtitle">Keep track of your progress</h2>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="container">
+            
+            <div class="tracker">
+
+                <div class="tracker__tabs">
+                    <button class="tracker__tab active">Add Entry</button>
+                    <button class="tracker__tab">See History</button>
+                </div>
+
+                <div class="tracker__form-box">
+                    <form action="#" class="tracker__form">
+                        <div class="tracker__form-row">
+                            <label class="tracker__form-input-box">
+                                <span class="tracker__form-input-name">Date:</span>
+                                <input tabindex="1" required type="text" class="tracker__form-input tracker__form-input--date">
+                            </label>
+                            <div class="tracker__form-input-box">
+                                <span class="tracker__form-input-name">Type of workout:</span>
+                                <div class="tracker__form-input-row">
+                                    <span class="tracker__form-checkbox-box">
+                                        <label class="tracker__form-checkbox-name">
+                                            <input tabindex="2" required type="radio" name="workout-type" id="endurance" class="tracker__form-checkbox input-hidden">
+                                            <span class="tracker__form-input-real"></span>
+                                            <span class="tracker__form-checkbox-label">Endurance</span>
+                                        </label>
+                                    </span>
+                                    <span class="tracker__form-checkbox-box">
+                                        <label class="tracker__form-checkbox-name">
+                                            <input tabindex="3" required type="radio" name="workout-type" id="power" class="tracker__form-checkbox input-hidden">
+                                            <span class="tracker__form-input-real"></span>
+                                            <span class="tracker__form-checkbox-label">Power</span>
+                                        </label>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <label class="tracker__form-input-box">
+                                <span class="tracker__form-input-name">Duration (min):</span>
+                                <input tabindex="4" required type="number" class="tracker__form-input tracker__form-input--duration" placeholder="only number">
+                            </label>
+                            <label class="tracker__form-input-box">
+                                <span class="tracker__form-input-name">Rounds/sets:</span>
+                                <input tabindex="5" required type="number" class="tracker__form-input tracker__form-input--sets" placeholder="only number">
+                            </label>
+                        </div>
+                        <textarea tabindex="6" required class="tracker__form-textarea tracker__form-input--notes" placeholder="Your Notes..."></textarea>
+                        <button class="tracker__form-submit-btn">Add</button>
+                    </form>
+                </div>
+
+                <div class="tracker__entries-box">
+                    <div class="tracker__entries-header">
+                        <div class="tracker__entries-num">Entries: <span>0</span></div>
+                        <button class="tracker__entries-btn">"Export"</button>
+                    </div>
+                    <div class="tracker__entries-container"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
